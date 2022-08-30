@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.dark-theme {
+  --main: #2e212b;
+  --mainfont: #eae2e8;
+  --maincard: #a27c99;
+}
+.light-theme {
+  --main: #eae2e8;
+  --mainfont: #2e212b;
+  --maincard: #2e212b;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  /* color: #2e212b; */
+  color: var(--mainfont);
+  /* background-color: #eae2e8; */
+  background-color: var(--main);
+  overflow-x: hidden;
+  transition: background 0.2s linear;
+}
+/**********NAV************/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--mainfont);
+  align-items: center;
+  height: 5rem;
+}
+
+/*******SEARCH & FILTER*********/
+.left-icon {
+  color: var(--mainfont);
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  background-color: #986d8e;
+  color: #faeee9;
+}
+.btn:hover,
+.btn:active {
+  background-color: #5b4155;
+  color: #faeee9;
+}
+
+.round {
+  border-radius: 11px;
+}
+.search-inputcss {
+  padding: 1.2rem 2.4rem !important;
+  background-color: #faeee9;
+  border-radius: 11px;
+  height: 1.2rem;
+}
+.filter-select {
+  padding: 0.8rem 1.2rem !important;
+  background-color: #faeee9;
+  border-radius: 11px;
+  margin-top: 1.2rem;
+}
+.btn-filterAll option {
+  color: #2e212b !important;
+}
+.show {
+  margin-top: 1.4rem;
+}
+/**********SWITCH******/
+body.dark {
+  background-color: #2e212b;
+  color: #eae2e8;
+}
+.dark-switch {
+  margin-right: 1.8rem;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 50px;
+  height: 26px;
+  background-color: #111;
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.moon {
+  color: #c3c3df;
+}
+
+.sun {
+  color: yellow;
+}
+
+/******left side******/
+.left-sidebar {
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.left-sidebar a:link,
+.left-sidebar a:visited {
+  display: inline-block;
+  color: #2e212b;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  margin-top: 3.2rem;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.left-sidebar a:hover,
+.left-sidebar a:active {
+  color: #c3c3df;
+  border-bottom: 1px solid transparent;
+}
+
+/***********Main*********/
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  height: 88.8vh;
+}
+.left-sidebar {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--mainfont);
+  height: 100%;
+}
+.right-sidebar {
+  border-left: 1px solid var(--mainfont);
+  height: 100%;
+}
+.right-quote {
+  width: 50%;
+}
+.side-logo {
+  margin-left: 3.2rem;
+}
+.special {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 1.2rem;
+  height: 88.8vh;
+}
+.card {
+  border-radius: 11px;
+  background-color: var(--maincard);
+}
+
+.milstone {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.allAccordion {
+  grid-row: 12/15;
+  grid-column: 1/5;
+}
+.accordion-item {
+  margin-bottom: 1.8rem;
+}
+
+.dash-todo {
+  grid-column: 3/6;
+  grid-row: 3/5;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.card-body {
+  background-color: #2e212b;
+  height: 20rem;
+}
+
+/********Right Side*****/
+.right-img {
+  margin-top: 1.2rem;
+  width: 100%;
+}
+.right-quote {
+  margin-top: 1.8rem;
+  margin-bottom: 2.4rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+.right-calender {
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 0;
+  margin-left: 1.2rem;
+}
+
+.Low {
+  border-bottom: 2px solid green;
+  color: green;
+}
+
+.Normal{
+  border-bottom: 2px solid orange;
+  color: orange;
+}
+.Critical{
+  border-bottom: 2px solid red;
+  color: red;
+}
